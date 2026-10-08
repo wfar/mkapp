@@ -1,0 +1,30 @@
+mkapp Output Exception
+
+Copyright (C) 2026 Wahhaj Farooq
+
+This exception is an additional permission under section 7 of the GNU
+General Public License, version 3 ("GPLv3").
+
+"Output" means any file that mkapp, when run, generates or copies from
+its own source tree into a build product it creates, such as an
+executable, a macOS .app bundle, or a .dmg disk image. For example, this
+includes the disk image background (resources/dmg_background.tiff) and
+the generated Info.plist.
+
+You may use, modify, and distribute Output, alone or as part of a build
+product, under terms of your choice, without any restriction from the
+GPLv3. This exception does not cover mkapp itself. Modifying mkapp, or
+distributing mkapp or any part of it other than as Output, remains
+subject to the GPLv3.
+
+The sample icon (resources/sample-icon.png) may also be used, modified,
+and distributed by anyone, for any purpose and under terms of their
+choice, without any restriction from the GPLv3 and without attribution,
+whether or not it is part of Output.
+
+mkapp's license does not affect the license of programs you build with
+it, whether or not this exception applies.
+
+If you modify mkapp, you may extend this exception to your version, but
+you are not required to. If you do not wish to do so, delete this
+exception statement from your version.

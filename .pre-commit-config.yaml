@@ -1,0 +1,26 @@
+repos:
+  - repo: local
+    hooks:
+      - id: make-format
+        name: make format
+        entry: make format
+        language: system
+        pass_filenames: false
+        types_or: [shell, python]
+
+      - id: make-lint
+        name: make lint
+        entry: make lint
+        language: system
+        pass_filenames: false
+        types_or: [shell, python]
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files

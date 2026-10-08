@@ -1,0 +1,42 @@
+[project]
+name = "mkapp"
+version = "0.1.0"
+description = "Build a standalone executable from a Python script"
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE", "LICENSE-EXCEPTION"]
+authors = [
+    { name = "Wahhaj Farooq" },
+]
+requires-python = ">=3.13"
+dependencies = [
+    "textual",
+]
+
+[dependency-groups]
+build = [
+    "pyinstaller==6.22.3",
+    "pyinstaller-hooks-contrib==2026.8",
+]
+dev = [
+    "pip-audit==2.*",
+    "pre-commit==4.*",
+    "pytest==9.*",
+    "pytest-asyncio==1.*",
+    "ruff==0.16.8",
+    "shellcheck-py==0.11.0.1",
+    "shfmt-py==4.2.0",
+]
+
+[tool.uv]
+# mkapp is a set of scripts, not an installable package
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+extend-select = ["S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S603"]
